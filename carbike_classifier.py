@@ -73,7 +73,7 @@ elif model is not None:
         st.info("The model detected something, but it's inconclusive.")
 
     st.subheader("Model Probabilities")
-    prob_df = tf.DataFrame({
+    prob_df = pd.DataFrame({
         'Class': class_names,
         'Probability (%)': prediction[0] * 100
     }).sort_values(by='Probability (%)', ascending=False)
