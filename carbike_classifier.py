@@ -71,10 +71,3 @@ elif model is not None:
         st.success("lassification successful! This looks like a Motorcycle/Bike.")
     else:
         st.info("The model detected something, but it's inconclusive.")
-
-    st.subheader("Model Probabilities")
-    prob_df = pd.DataFrame({
-        'Class': class_names,
-        'Probability (%)': prediction[0] * 100
-    }).sort_values(by='Probability (%)', ascending=False)
-    st.dataframe(prob_df, hide_index=True)
