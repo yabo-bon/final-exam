@@ -33,9 +33,6 @@ st.write("Upload an image to determine if it is a motorcycle or a car.")
 file = st.file_uploader("Upload a vehicle image", type=["jpg", "jpeg", "png", "bmp"])
 
 def import_and_predict(image_data, model):
-    """
-    Preprocesses the image to match the model's input size and makes a prediction.
-    """
     if model is None:
         return None
 
