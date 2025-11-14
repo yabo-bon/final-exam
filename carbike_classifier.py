@@ -19,7 +19,7 @@ model = load_model()
 class_names = ['Bike', 'Car']
 
 st.title("Bike or Car Classifier")
-st.write("Upload an image to determine if it is a motorcycle or a car.")
+st.write("Upload an image to determine if it is a bike/motorcycle or a car.")
 
 file = st.file_uploader("Upload a vehicle image", type=["jpg", "jpeg", "png", "bmp"])
 
@@ -56,6 +56,6 @@ elif model is not None:
     if predicted_class == 'Car':
         st.success("Classification successful! This looks like a Car.")
     elif predicted_class == 'Bike':
-        st.success("lassification successful! This looks like a Motorcycle/Bike.")
+        st.success("lassification successful! This looks like a Bike/Motorcycle.")
     else:
         st.info("The model detected something, but it's inconclusive.")
