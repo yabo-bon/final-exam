@@ -9,7 +9,7 @@ st.markdown("""
     <style>
     /* ---- Background Image ---- */
     .stApp {
-        background: url("https://i.ibb.co/7Qt6Wzv/road-bg.jpg");
+        background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fcar-background&psig=AOvVaw2mzomchxDlWMUx5M4XejJ-&ust=1763294084334000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPja08CM9JADFQAAAAAdAAAAABAj");
         background-size: cover;
         background-attachment: fixed;
         color: #ffffff !important;
