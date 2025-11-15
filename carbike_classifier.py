@@ -17,7 +17,7 @@ st.markdown("""
 
     /* ---- Title & Text Colors ---- */
     h1, h2, h3, p, label, span {
-        color: #ffeb3b !important;        /* Bright yellow text */
+        color: #ffffff !important;        /* Bright yellow text */
         text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
