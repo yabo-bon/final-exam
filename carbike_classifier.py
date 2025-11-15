@@ -9,7 +9,7 @@ st.markdown("""
     <style>
     /* ---- Background Image ---- */
     .stApp {
-        background-image: url('https://github.com/yabo-bon/final-exam/blob/main/background.jpg');
+        background-image: url('https:/raw.githubusercontent.com/yabo-bon/final-exam/blob/main/background.jpg');
         background-size: cover; 
         background-position: center;
         background-repeat: no-repeat;
