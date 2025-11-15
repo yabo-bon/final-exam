@@ -56,6 +56,6 @@ elif model is not None:
     if predicted_class == 'Car':
         st.success("Classification successful! This looks like a Car.")
     elif predicted_class == 'Bike':
-        st.success("lassification successful! This looks like a Bike/Motorcycle.")
+        st.success("Classification successful! This looks like a Bike/Motorcycle.")
     else:
         st.info("The model detected something, but it's inconclusive.")
