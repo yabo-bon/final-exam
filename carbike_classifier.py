@@ -7,10 +7,12 @@ st.set_page_config(page_title="Car/Bike Classifier", layout="centered")
 
 st.markdown("""
     <style>
-
-    /* ---- Background Color ---- */
+    /* ---- Background Image ---- */
     .stApp {
-        background-color: #ffffff !important;   /* Dark clean background */
+        background-image: url('https://example.com/your-background.jpg');
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     h1, h2, h3, p, label, span {
@@ -49,7 +51,6 @@ st.markdown("""
 
     </style>
 """, unsafe_allow_html=True)
-
 
 @st.cache_resource
 def load_model():
