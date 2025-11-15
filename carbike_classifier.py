@@ -5,6 +5,57 @@ from PIL import Image, ImageOps
 
 st.set_page_config(page_title="Car/Bike Classifier", layout="centered")
 
+st.markdown("""
+    <style>
+    .stApp {
+        background-color: #1b1b1b;
+        color: #fdd835;
+    }
+    h1, h2, h3, p, label {
+        color: #fdd835 !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        color: #FFEB3B;
+    }
+    .uploadedImage > img {
+        border: 3px solid #fdd835;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(255, 230, 0, 0.4);
+    }
+    .css-1v0mbdj, .css-ffhzg2 {
+        color: #fdd835 !important;
+    }
+    .stButton>button {
+        background-color: #fdd835;
+        color: black;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: bold;
+        border: 2px solid black;
+    }
+    .stButton>button:hover {
+        background-color: black;
+        color: #fdd835;
+        border: 2px solid #fdd835;
+    }
+    .stFileUploader label {
+        color: #fdd835 !important;
+        font-size: 18px;
+    }
+    .result-box {
+        background-color: rgba(253, 216, 53, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        border: 2px solid #fdd835;
+        text-align: center;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 @st.cache_resource
 def load_model():
     try:
