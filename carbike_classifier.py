@@ -73,10 +73,9 @@ st.title("🚗🏍️ Car or Bike Image Classifier")
 st.markdown("""
 <div class="instructions-box">
     <h3>📌 How to Use This App</h3>
-    <p>1. Click the <strong>Upload</strong> button below and choose a picture of a car or motorcycle/bike.</p>
+    <p>1. Click the <strong>Browse</strong> button below and choose a picture of a car or motorcycle/bike.</p>
     <p>2. Wait a few seconds while the model analyzes the image.</p>
     <p>3. The classifier will display whether the image is a <strong>Car</strong> or <strong>Motorcycle/Bike</strong>, along with its confidence level.</p>
-    <p>4. Try different angles, lighting conditions, and vehicle types for best results.</p>
 </div>
 """, unsafe_allow_html=True)
 
