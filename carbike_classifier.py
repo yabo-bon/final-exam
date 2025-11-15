@@ -7,10 +7,14 @@ st.set_page_config(page_title="Car/Bike Classifier", layout="centered")
 
 st.markdown("""
     <style>
-    
+
+    /* ---- Background Color ---- */
+    .stApp {
+        background-color: #ffffff !important;   /* Dark clean background */
+    }
 
     h1, h2, h3, p, label, span {
-        color: #ffffff !important;        /* Bright yellow text */
+        color: #ffffff !important;        
         text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
@@ -20,10 +24,10 @@ st.markdown("""
     }
 
     .instructions-box {
-        background-color: rgba(0, 0, 0, 0.65);   /* Dark transparent box */
+        background-color: rgba(0, 0, 0, 0.65);
         padding: 20px;
         border-radius: 12px;
-        border: 2px solid #ffeb3b;              /* Yellow border */
+        border: 2px solid #ffeb3b;
         margin-bottom: 25px;
     }
 
@@ -45,6 +49,7 @@ st.markdown("""
 
     </style>
 """, unsafe_allow_html=True)
+
 
 @st.cache_resource
 def load_model():
