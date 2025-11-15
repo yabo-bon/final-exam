@@ -7,15 +7,8 @@ st.set_page_config(page_title="Car/Bike Classifier", layout="centered")
 
 st.markdown("""
     <style>
-    /* ---- Background Image ---- */
-    .stApp {
-        background: url("");
-        background-size: cover;
-        background-attachment: fixed;
-        color: #ffffff !important;
-    }
+    
 
-    /* ---- Title & Text Colors ---- */
     h1, h2, h3, p, label, span {
         color: #ffffff !important;        /* Bright yellow text */
         text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
@@ -26,7 +19,6 @@ st.markdown("""
         font-weight: 900;
     }
 
-    /* ---- Instructions Box ---- */
     .instructions-box {
         background-color: rgba(0, 0, 0, 0.65);   /* Dark transparent box */
         padding: 20px;
@@ -35,7 +27,6 @@ st.markdown("""
         margin-bottom: 25px;
     }
 
-    /* ---- Buttons ---- */
     .stButton>button {
         background-color: #ffeb3b !important;
         color: #000000 !important;
@@ -46,7 +37,6 @@ st.markdown("""
         box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
 
-    /* ---- Upload Label ---- */
     .stFileUploader label {
         color: #ffeb3b !important;
         font-size: 17px;
