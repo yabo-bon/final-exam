@@ -9,7 +9,7 @@ st.markdown("""
     <style>
     /* ---- Background Image ---- */
     .stApp {
-        background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fwebsite-background&psig=AOvVaw278kLbOvvJcklR01-HCHOM&ust=1763294262275000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKjbqJKN9JADFQAAAAAdAAAAABAE");
+        background: url("");
         background-size: cover;
         background-attachment: fixed;
         color: #ffffff !important;
