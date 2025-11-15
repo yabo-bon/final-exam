@@ -10,9 +10,10 @@ st.markdown("""
     /* ---- Background Image ---- */
     .stApp {
         background-image: url('https:/raw.githubusercontent.com/yabo-bon/final-exam/blob/main/background.jpg');
-        background-size: cover; 
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        height: 100vh;
     }
 
     h1, h2, h3, p, label, span {
