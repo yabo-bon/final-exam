@@ -5,44 +5,57 @@ from PIL import Image, ImageOps
 
 st.set_page_config(page_title="Car/Bike Classifier", layout="centered")
 
-# ----------------- CUSTOM STYLING -----------------
 st.markdown("""
     <style>
-    .stApp {             
-        background-color: #1c1c1c !important;
-        color: #ffffff;
+    /* ---- Background Image ---- */
+    .stApp {
+        background: url("https://i.ibb.co/7Qt6Wzv/road-bg.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        color: #ffffff !important;
     }
-    h1, h2, h3, p, label {
-        color: #FFD700 !important;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+
+    /* ---- Title & Text Colors ---- */
+    h1, h2, h3, p, label, span {
+        color: #ffeb3b !important;        /* Bright yellow text */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
+
     h1 {
         text-align: center;
+        font-weight: 900;
     }
+
+    /* ---- Instructions Box ---- */
     .instructions-box {
-        background-color: rgba(255, 215, 0, 0.15);
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid #FFD700;
+        background-color: rgba(0, 0, 0, 0.65);   /* Dark transparent box */
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px solid #ffeb3b;              /* Yellow border */
         margin-bottom: 25px;
     }
+
+    /* ---- Buttons ---- */
     .stButton>button {
-        background-color: #FFD700 !important;
-        color: #000 !important;
-        border-radius: 8px !important;
-        padding: 0.5rem 1rem !important;
-        font-weight: bold !important;
+        background-color: #ffeb3b !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
+        border-radius: 10px !important;
+        padding: 0.6rem 1.3rem !important;
         border: none;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
+
+    /* ---- Upload Label ---- */
     .stFileUploader label {
-        color: #FFD700 !important;
-        font-weight: bold !important;
-        font-size: 16px;
+        color: #ffeb3b !important;
+        font-size: 17px;
+        font-weight: bold;
     }
+
     </style>
 """, unsafe_allow_html=True)
 
-# ----------------- LOAD MODEL -----------------
 @st.cache_resource
 def load_model():
     try:
@@ -55,10 +68,8 @@ def load_model():
 model = load_model()
 class_names = ['Bike', 'Car']
 
-# ----------------- TITLE -----------------
 st.title("🚗🏍️ Car or Bike Image Classifier")
 
-# ----------------- HOW TO USE -----------------
 st.markdown("""
 <div class="instructions-box">
     <h3>📌 How to Use This App</h3>
