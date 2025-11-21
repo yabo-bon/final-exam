@@ -2,30 +2,46 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image, ImageOps
+import base64
 
 st.set_page_config(page_title="Car/Bike Classifier", layout="centered")
 
-st.markdown("""
+def get_base64_image(image_path):
+    with open(image_path, "rb") as image_file:
+        encoded = base64.b64encode(image_file.read()).decode()
+    return f"data:image/jpeg;base64,{encoded}"
+
+bg_image = get_base64_image('background.jpg')
+
+st.markdown(f"""
     <style>
-    h1, h2, h3, p, label, span {
+    .stApp {{
+        background-image: url({bg_image});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }}
+    
+    h1, h2, h3, p, label, span {{
         color: #ffffff !important;        
         text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    }
+    }}
 
-    h1 {
+    h1 {{
         text-align: center;
         font-weight: 900;
-    }
+    }}
 
-    .instructions-box {
+    .instructions-box {{
         background-color: rgba(0, 0, 0, 0.65);
         padding: 20px;
         border-radius: 12px;
         border: 2px solid #ffeb3b;
         margin-bottom: 25px;
-    }
+    }}
 
-    .stButton>button {
+    .stButton>button {{
         background-color: #ffeb3b !important;
         color: #000000 !important;
         font-weight: 700 !important;
@@ -33,13 +49,13 @@ st.markdown("""
         padding: 0.6rem 1.3rem !important;
         border: none;
         box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    }
+    }}
 
-    .stFileUploader label {
+    .stFileUploader label {{
         color: #ffeb3b !important;
         font-size: 17px;
         font-weight: bold;
-    }
+    }}
 
     </style>
 """, unsafe_allow_html=True)
