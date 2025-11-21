@@ -6,12 +6,12 @@ import base64
 
 st.set_page_config(page_title="Car/Bike Classifier", layout="centered")
 
-def get_base64_image(image_path):
+def get_image(image_path):
     with open(image_path, "rb") as image_file:
         encoded = base64.b64encode(image_file.read()).decode()
     return f"data:image/jpeg;base64,{encoded}"
 
-bg_image = get_base64_image('background2.jpg')
+bg_image = get_image('background2.jpg')
 
 st.markdown(f"""
     <style>
